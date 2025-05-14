@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Analyst AI</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Add marked.js for markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-chart-line"></i> AI Financial Analyst</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="search-section">
+            <div class="search-container">
+                <input type="text" id="stockSymbol" placeholder="Enter a stock symbol (e.g., AAPL, MSFT, GOOGL, AMZN)" value="" autofocus>
+                <button id="analyzeBtn" class="primary-btn">
+                    <i class="fas fa-search"></i> Analyze Stock
+                </button>
+            </div>
+        </section>
+
+        <div id="loadingIndicator" class="hidden" style="display:none !important;">
+            <div class="spinner"></div>
+            <p>Analyzing stock data... This may take a minute.</p>
+        </div>
+
+        <section id="errorContainer" class="error-container hidden">
+            <i class="fas fa-exclamation-circle"></i>
+            <p id="errorMessage"></p>
+        </section>
+
+        <section id="resultContainer" class="result-container hidden">
+            <div class="result-header">
+                <h2 id="stockTitle">Analysis Results</h2>
+                <div class="action-buttons">
+                    <button id="refreshBtn" class="secondary-btn" title="Get latest data">
+                        <i class="fas fa-sync-alt"></i> Update Data
+                    </button>
+                    <button id="downloadBtn" class="secondary-btn" title="Download Report">
+                        <i class="fas fa-download"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="reportContent" class="report-content"></div>
+        </section>
+
+        <section id="rawDataContainer" class="raw-data-container hidden">
+            <div class="collapsible-header">
+                <h3>Raw Stock Data</h3>
+                <button id="toggleRawData" class="toggle-btn">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+            <div id="rawDataContent" class="raw-data-content hidden">
+                <pre id="rawDataJson"></pre>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© AI Financial Analyst. This is for demo purpose.</p>
+        </div>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html> 
