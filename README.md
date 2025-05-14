@@ -22,6 +22,32 @@ A web application that performs comprehensive stock analysis and generates profe
 
 ## 🛠️ Installation
 
+You can run this application either using Docker or traditional installation methods.
+
+### 🐳 Using Docker (Recommended)
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/ayogenthiran/multi_agent_financial_analyst.git
+   cd multi_agent_financial_analyst
+   ```
+
+2. **Set up environment variables:**
+   Create a `.env` file in the root directory:
+   ```bash
+   # .env file
+   OPENAI_API_KEY=your_openai_api_key_here
+   ```
+
+3. **Build and run with Docker Compose:**
+   ```bash
+   docker-compose up --build
+   ```
+
+   The application will be available at `http://localhost:8000`
+
+### 📦 Traditional Installation
+
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/ayogenthiran/multi_agent_financial_analyst.git

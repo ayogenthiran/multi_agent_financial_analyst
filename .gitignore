@@ -58,4 +58,8 @@ htmlcov/
 nosetests.xml
 coverage.xml
 *.cover
-.hypothesis/ 
+.hypothesis/
+
+# Docker
+.docker/
+docker-compose.override.yml 
